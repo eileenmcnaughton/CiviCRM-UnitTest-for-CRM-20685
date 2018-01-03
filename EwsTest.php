@@ -196,7 +196,7 @@ class api_v3_EwsTest extends CiviUnitTestCase {
     $this->assertEquals($expectedLineItem, $lineItem2['values'][0]);
   }
 
-  
+
 
    /**
    * Set up the basic recurring contribution for tests.
@@ -246,8 +246,8 @@ class api_v3_EwsTest extends CiviUnitTestCase {
       ), $generalParams)
     );
 
-    //$EWSUpdateContribution = civicrm_api3('contribution', 'create', array('id' => 1, 'financial_type_id' => 3));
-    //$EWSUpdateLineItem = civicrm_api3('line_item', 'create', array('id' => 1, 'financial_type_id' => 2));
+    $EWSUpdateContribution = civicrm_api3('contribution', 'create', array('id' => 1, 'financial_type_id' => 3));
+    $EWSUpdateLineItem = civicrm_api3('line_item', 'create', array('id' => 1, 'financial_type_id' => 2));
     //$EWSUpdateContributionRecur = civicrm_api3('contribution_recur', 'create', array('id' => 1, 'financial_type_id' => 1));
 
     $contributionsHere = $this->callAPISuccess('contribution', 'get', array('sequential' => 1,));
