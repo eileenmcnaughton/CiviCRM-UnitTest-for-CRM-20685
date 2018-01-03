@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 /*EWS Test*/
 
 class api_v3_EwsTest extends CiviUnitTestCase {
